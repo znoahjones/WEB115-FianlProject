@@ -1,0 +1,110 @@
+body {
+    background-color: dimgray;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: rgba(117, 2, 2, 0.692);
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+
+table.header-table {
+    width: 100%;
+}
+
+table.header-table td {
+    text-align: center;
+    width: 33.33%;
+}
+
+#non-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 20px;
+}
+
+/* Style for the form inputs */
+label, input[type="text"], input[type="email"], input[type="submit"] {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Style for Name and Email inputs */
+.name-email {
+    display: flex;
+    justify-content: space-between; /* Space elements evenly */
+    width: 450px; /* Adjust width as needed */
+    background-color: rgba(117, 2, 2, 0.437);
+}
+
+input {
+    background-color: dimgray;
+    color: white;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 48%; 
+}
+
+input[type="submit"] {
+    background-color: rgba(117, 2, 2, 0.692);
+    color: white;
+}
+
+table{
+    width: 80%;
+    margin: 20px auto; 
+    border-collapse: collapse;
+}
+
+table.meal-table {
+    background-color: rgba(117, 2, 2, 0.437);
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+}
+
+#day {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    background-color: rgba(117, 2, 2, 0.262);
+    color: white;
+    border-radius: 15%;
+    text-align: center;
+  }
+
+p{
+    font-size: 3px;
+    color: lightgray;
+}
+
+button{
+    background-color: rgba(117, 2, 2, 0.692);
+    color: white;
+    border-radius: 15%;;
+    font-weight: bold;
+}
+
+tr button {
+    width: 100%;
+}
+
+table#meal-meter td{
+    border: 2px solid lightgray;
+    color: lightgray;
+    width: 50px;
+    height: 50px;
+}

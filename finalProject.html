@@ -2,89 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="finalProject.css">
+    <script src="finalProject.js"></script>
     <title>WEB-115 Final Project</title>
-    <style>
-        /* Styles remain the same for body, header, form, inputs, and buttons */
-
-        body {
-            background-color: dimgray;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        header {
-            background-color: rgba(117, 2, 2, 0.692);
-            margin-top: 0;
-            padding-top: 20px;
-        }
-
-        table.header-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        table.header-table th, 
-        table.header-table td {
-            padding: 8px;
-            text-align: center;
-            width: 33.33%;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column; /* Stack items vertically */
-            align-items: center; /* Center items horizontally */
-            margin-top: 20px;
-        }
-
-        /* Style for the form inputs */
-        label, input[type="text"], input[type="email"], input[type="submit"] {
-            margin: 5px;
-            padding: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        /* Style for Name and Email inputs */
-        .name-email {
-            display: flex;
-            justify-content: space-between; /* Space elements evenly */
-            width: 250px; /* Adjust width as needed */
-        }
-
-        input[type="text"],
-        input[type="email"] {
-            width: 48%; /* Adjust width as needed */
-        }
-
-        input[type="submit"] {
-            background-color: rgba(117, 2, 2, 0.692);
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        table.meal-table {
-            width: 80%;
-            margin-top: 20px; /* Add some spacing between the form inputs and table */
-            border-collapse: collapse;
-            background-color: rgba(117, 2, 2, 0.2);
-        }
-
-        table.meal-table th, 
-        table.meal-table td {
-            padding: 8px;
-            text-align: center;
-            border: 1px solid white;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <!-- Header table remains the same -->
         <table class="header-table">
             <tr>
                 <td>Zachary Jones</td>
@@ -96,32 +19,64 @@
             </tr>
         </table>
     </header>
-    
+
+    <div id="non-head">
+    <p>Click the day to change the day you want to plan meals for. When you're done adding meals for this day, click the "add" button and do this for every day until all days are green then submit. You may erase the meals for all days by clikcing the "clear" button. When you are finished enter your name and email address then click "submit".</p>
+
+    <table class="meal-table">
+        <tr>
+            <td colspan="5"><select id="day">
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td>Breakfast</td>
+            <td>Snack #1</td>
+            <td>Lunch</td>
+            <td>Snack #2</td>
+            <td>Dinner</td>
+        </tr>
+        <tr>
+            <td><input class="food"></td>
+            <td><input class="food"></td>
+            <td><input class="food"></td>
+            <td><input class="food"></td>
+            <td><input class="food"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="add">Add</button></td>
+            <td></td>
+            <td colspan="2"><button id="clear">Clear</button></td>
+        </tr>
+    </table>
+
+    <table id="meal-meter">
+        <tr>
+            <td id="sunday">Sunday</td>
+            <td id="monday">Monday</td>
+            <td id="tuesday">Tuesday</td>
+            <td id="wednesday">Wednesday</td>
+            <td id="thursday">Thursday</td>
+            <td id="friday">Friday</td>
+            <td id="saturday">Saturday</td>
+        </tr>
+    </table>
+
     <form action="/submit" method="post">
-        <!-- Name and Email fields in a horizontal layout -->
         <div class="name-email">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
-        </div>
-        <div class="name-email">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email">
-        </div>
-
-        <!-- Meal table moved below Name and Email fields -->
-        <table class="meal-table">
-            <tr>
-                <td></td>
-                <td>Breakfast</td>
-                <td>Snack #1</td>
-                <td>Lunch</td>
-                <td>Snack #2</td>
-                <td>Dinner</td>
-            </tr>
-            <!-- Add more rows and data here -->
-        </table>
-        
-        <input type="submit" value="Submit">
+        </div>        
+        <input type="submit" id="submit" value="Submit">
     </form>
+</div>
 </body>
 </html>
